@@ -1,0 +1,42 @@
+{
+  "name": "mini-chat",
+  "version": "1.0.0",
+  "description": "mern stack chat",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "server": "nodemon app.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cristian1001001/mini-chat.git"
+  },
+  "keywords": [
+    "mer",
+    "chat",
+    "react"
+  ],
+  "author": "Tatar Cristian <trevor.tm21@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cristian1001001/mini-chat/issues"
+  },
+  "homepage": "https://github.com/Cristian1001001/mini-chat#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "config": "^3.3.3",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.14",
+    "socket.io": "^3.1.0"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "cors": "^2.8.5",
+    "express-validator": "^6.9.2",
+    "jsonwebtoken": "^8.5.1",
+    "nodemon": "^2.0.7"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "port": 5000,
+  "jwtSecret": "a mini chat",
+  "mongoUrl": "mongodb+srv://root:qwerty123@cluster0.sxg7q.mongodb.net/mini-chat?retryWrites=true&w=majority"
+}
