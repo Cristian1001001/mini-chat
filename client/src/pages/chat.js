@@ -1,6 +1,10 @@
-import React, {useState} from 'react'
+import React, {useState,useEffect} from 'react'
 import moment from "moment";
 import {useSelector} from "react-redux";
+import socketIOClient from "socket.io-client";
+const ENDPOINT = "ws://127.0.0.1:5000";
+
+let socket ;
 
 export const Chat = ()=>{
     const {data} = useSelector(state=>state.auth)
@@ -8,10 +12,22 @@ export const Chat = ()=>{
     const changeHandler = event => {
         setMessage(event.target.name= event.target.value )
     }
+
+
+
+    useEffect(() => {
+        socket = socketIOClient(ENDPOINT);
+        socket.on('Hey pula',data => console.log(data))
+        // socket.bind()
+    },[])
     // const submitMessage = (e)=>{
     //     let nowTime=moment()
     //     dispatch(sentMessage(form.message,userId,roomId,nowTime))
     // }
+
+    const onClick = () => {
+
+        socket.emit('test',{'data':message})}
 
     return(
         <>
@@ -24,6 +40,7 @@ export const Chat = ()=>{
                             onChange={changeHandler}
                             />
                             <button className="btn-btn-small waves-effect waves-light blue"
+                                    onClick={onClick}
 
                             >
                                 Sent
