@@ -1,0 +1,25 @@
+.main{
+height: 100%;
+}
+.button-list-container{
+    border:1px solid black;
+}
+.button-list{
+    display: block;
+    width: 100%;
+    background-color: white;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+}
+.list-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.header-button{
+    margin-top: 15px;
+}
+

@@ -1,0 +1,31 @@
+.window{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 20px;
+    width: 65%;
+    margin-left: 20px;
+}
+.message-input{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /*width: 90%;*/
+}
+.message-bubble{
+    max-width: max-content;
+    /*display: flex;*/
+    /*align-items: self-end;*/
+    /*flex-flow: column wrap;*/
+}
+.bubble{
+    background-color: cornflowerblue;
+    color: #fff;
+    margin-bottom: 5px;
+    padding: 3px 5px;
+    border-radius: 2em;
+
+}
+/*.instant-message{*/
+
+/*}*/

@@ -2,3 +2,7 @@ export const LOGIN_REGISTER = "LOGIN_REGISTER";
 export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
 export const LOG_OUT = 'LOG_OUT';
 export const ENTER_ROOM="ENTER_ROOM";
+export const GET_ALL_ROOMS="GET_ALL_ROOMS";
+export const GET_ALL_MESSAGES="GET_ALL_MESSAGES";
+export const RESET_MESSAGES="RESET_MESSAGES";
+export const SET_IS_LOADING="SET_IS_LOADING"

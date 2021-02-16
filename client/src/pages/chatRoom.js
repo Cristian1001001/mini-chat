@@ -2,12 +2,12 @@ import React, {useState} from 'react'
 import moment from "moment";
 import {useDispatch, useSelector} from "react-redux";
 import {enterRoom} from "../redux/actions/room";
-import {Redirect} from "react-router-dom";
+import {Chat} from "./chat";
+import {ChatList} from "../components/chatList";
 
 export const ChatRoom = () => {
     const dispatch = useDispatch()
     const {userId} = useSelector(state=>state.auth)
-    const {roomName}= useSelector(state=> state.room)
     const [room, setRoom]= useState('')
     const changeHandler = event => {
         setRoom(event.target.name= event.target.value )
@@ -25,18 +25,12 @@ export const ChatRoom = () => {
                    name='room'
                 onChange={changeHandler}
             />
-                <label className="active">Write Room</label>
+                <label className="active">Create Room</label>
                 <button
                     onClick={submitRoom}
                 >
                     Enter
                 </button>
-            {
-                !!roomName ?
-                    <Redirect to='/chat'/>
-                        :
-                    null
-            }
         </div>
         </div>
         </>

@@ -20,7 +20,7 @@ const login_reducer =(state=initialState, action)=> {
                 // email: action.payload.email,
                 token: action.payload.token,
                 name: action.payload.userName,
-                userIdd: action.payload.userId,
+                userId: action.payload.userId,
                 isLoading: false,
                 isError: false,
                 isSuccess: true,

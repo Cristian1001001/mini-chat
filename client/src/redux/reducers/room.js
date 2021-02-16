@@ -1,8 +1,10 @@
-import {ENTER_ROOM} from "../types";
+import {ENTER_ROOM,GET_ALL_ROOMS} from "../types";
 
 const initialState = {
     roomName: '',
-    lastUpdate: null
+    lastUpdate: null,
+    roomId: '',
+    rooms: []
 }
 
 const roomReducer =(state=initialState, action)=> {
@@ -11,7 +13,13 @@ const roomReducer =(state=initialState, action)=> {
             return {
                 ...state,
                 roomName: action.payload.name,
-                lastUpdate: action.payload.lastUpdate
+                lastUpdate: action.payload.lastUpdate,
+                roomId: action.payload._id
+            }
+        case GET_ALL_ROOMS:
+            return {
+                ...state,
+                rooms: action.payload
             }
         default: // need this for default case
             return state

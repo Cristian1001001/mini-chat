@@ -4,6 +4,7 @@ import {SignUp} from "./pages/signUp";
 import {SignIn} from "./pages/signIn";
 import {Chat} from "./pages/chat";
 import {useSelector} from "react-redux";
+import {AppWindow} from "./pages/appWindow";
 import {ChatRoom} from "./pages/chatRoom";
 
 
@@ -13,15 +14,12 @@ export const UseRoutes = () =>{
         return (
             <>
                 <Switch>
-                    <Route path='/chatRoom'>
-                        <ChatRoom/>
-                    </Route>
-                    <Route path='/chat'>
-                        <Chat/>
+                    <Route path='/userWindow'>
+                        <AppWindow/>
                     </Route>
                 </Switch>
-                <Redirect to='/chatRoom'>
-                    <ChatRoom/>
+                <Redirect to='userWindow'>
+                    <AppWindow/>
                 </Redirect>
             </>
         )

@@ -1,0 +1,18 @@
+html,body{
+    height: 100%;
+}
+#root{
+    height: 100%;
+}
+.main-window{
+    display: flex;
+    flex-direction: row;
+    height: 86%;
+}
+.chat-list{
+    width: 30%;
+    margin-left: 5px;
+}
+.chat-window{
+    width: 70%;
+}
