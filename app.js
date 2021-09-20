@@ -34,7 +34,7 @@ async function start() {
             console.log('client connect');
             // console.log(socket.handshake.query)
             socket.join(socket.handshake.query.roomId)
-            socket.emit('Hey pula',{hey_pula:'hey Pula'})
+            socket.emit('Hey',{hey:'hey'})
             socket.on('echo', function (data) {
                 io.sockets.emit('message', data);
             });
